@@ -1,5 +1,5 @@
 import tensorflow as tf
-import numpy.py as np
+import numpy as np
 # neural network
 def add_layer(input, in_size, out_size, activation_functon=None):
     Weight = tf.Variable(tf.random_normal([in_size, out_size]))  # 行 列  正太分布
@@ -39,4 +39,4 @@ sess.run(init)
 for step in range(1000):
     sess.run(train_step,feed_dict={xs:x_data, ys:y_data})
     if step%50 == 0:
-        print(sess.run(loss,feed_dict={xs:x_data, ys:y_data}))
+        print(sess.run(loss,feed_dict={xs:x_data, ys:y_data}))  # 输出损失函数最小
